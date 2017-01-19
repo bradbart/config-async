@@ -1,5 +1,15 @@
 var app = angular.module('myapp', []);
 
+(function() {
+    var $http = angular.injector(['ng']).get('$http');
+    $http.get('/api/clientConfig').then(function (response) {
+        app.constant('clientConfigAsync', response.data);
+        angular.element(document).ready(function() {
+            angular.bootstrap(document, ['myapp']);
+        });
+    });
+})(); 
+
 app.service('clientConfigAsync', ['$q', '$http', function($q, $http){
     var clientConfigPromise = null;
 
