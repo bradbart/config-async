@@ -1,0 +1,16 @@
+{
+  "name": "asyncconfig",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mikedice",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angularjs": "0.0.1",
+    "express": "^4.14.0"
+  }
+}
